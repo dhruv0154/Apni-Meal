@@ -24,15 +24,7 @@ function Home() {
       <Element name="home">
         <Hero />
       </Element>
-
-      <Element name="about">
-        <About />
-      </Element>
-
-      <Element name="features">
-        <Features />
-      </Element>
-
+  
       <Element name="menu">
         <FeaturedMenu />
       </Element>
@@ -45,17 +37,6 @@ function Home() {
         <SubscriptionPlans />
       </Element>
 
-      <Element name="testimonials">
-        <Testimonials />
-      </Element>
-
-      <Element name="blog">
-        <Blog />
-      </Element>
-
-      <Element name="faq">
-        <FAQ />
-      </Element>
 
       <Footer />
       <WhatsAppButton />

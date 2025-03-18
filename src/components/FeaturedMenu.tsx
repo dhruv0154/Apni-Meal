@@ -164,6 +164,11 @@ function SampleMenuModal({
   );
 }
 
+// Updated color scheme
+const menuBackgroundColor = '#FB8500';
+const menuTextColor = '#2D1810';
+const menuAccentColor = '#D62828';
+
 export function FeaturedMenu() {
   const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
   const [isSampleMenuModalOpen, setIsSampleMenuModalOpen] = useState(false);
@@ -191,7 +196,7 @@ export function FeaturedMenu() {
   return (
     <>
       <section
-        className="py-24 bg-charcoal relative overflow-hidden"
+        className={`py-24 bg-[${menuBackgroundColor}] relative overflow-hidden`}
         style={{
           backgroundImage: "url('https://source.unsplash.com/featured/?meal')",
           backgroundSize: "cover",
@@ -199,14 +204,10 @@ export function FeaturedMenu() {
       >
         {/* Animated Background Blobs */}
         <motion.div
-          className="absolute top-0 left-0 w-32 h-32 bg-primary opacity-20 rounded-full filter blur-2xl"
-          animate={{ x: [0, 40, 0], y: [0, 40, 0] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-0 left-0 w-64 h-64 bg-[#D62828] opacity-10 rounded-full filter blur-3xl"
         />
         <motion.div
-          className="absolute bottom-0 right-0 w-32 h-32 bg-secondary opacity-20 rounded-full filter blur-2xl"
-          animate={{ x: [0, -40, 0], y: [0, -40, 0] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute bottom-0 right-0 w-64 h-64 bg-[#2D1810] opacity-10 rounded-full filter blur-3xl"
         />
         <motion.div
           className="absolute top-10 right-10 w-20 h-20 bg-primary opacity-10 rounded-full filter blur-xl"
