@@ -165,7 +165,7 @@ function SampleMenuModal({
 }
 
 // Updated color scheme
-const menuBackgroundColor = '#FB8500';
+const menuBackgroundColor = '#fb8500';
 const menuTextColor = '#2D1810';
 const menuAccentColor = '#D62828';
 
