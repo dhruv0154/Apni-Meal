@@ -18,9 +18,9 @@ const mealCategories = [
 
 function ImageCarousel() {
   const carouselImages = [
-    'https://a.imglink.io/qIjSg.jpeg',
-    'https://a.imglink.io/qIYn2.jpeg',
-    'https://a.imglink.io/qISrF.jpeg',
+    'https://media-hosting.imagekit.io/b8cc5294003048e9/1.png?Expires=1839430728&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=A7Ik549w0kafqo3gyaLt7LEvJYX7zoj7Tb3m5E0bK~JtlJ-i1eGCZw0ZdSQgHP2OtlAWGLtNSSnqt7WqEyTr65MGdxz-uQHkQIJxUzcvtybsgIQSwMK9nJjtojFftbsUTlBiGp~EOG-w-1H~ZlCuRUQZ4TsmMI4iFJro-1MjMMPrMj36jwMbh-sfUNN-6Q5rLJjPr9rLEgCy70881ZTvwQBSJrEnPcO7iiZKp9EbR-duOpeVH3KCpZo2cBhP4QESKvd2wLTrwiVtxoFuN~jDskVXqEJewwUle6MF~aVutwch4CfEevCP6qCREX8uK8ZOaDN2NeyZgPdOAN-Fo8QbNQ__',
+    'https://media-hosting.imagekit.io/75746365efa84c5f/2.png?Expires=1839430779&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=1JTHROB~q04fs63nH967xOCdoHPxuzAOspMk~L6kn6j-G5gg76XcnMzHaPBzQuy-F821hUekRajD13a5C5ap6l8EbDIZNasZ9Zotoitkr3tlMvtQSXJd9qHe3z6ijJ40YNxUcycLYMo0KY~hgF05W3FsYzOKR5nEThOLrIDRz8y6R92soEZeCQ0ZSREUGb6V~ZROZKD-qafK6mf7al-us6sKj15uqsjIrEY5iWy8WO-S20k3m6Yg1HIRcxxzRHnen2mTRdYocfSY6oQ6WwIckroK-v35ekIPlA79wksk6DNcC0OuEN7ykdICvG4H1scwL9u7TUkm6guot1L8P3riXQ__',
+    'https://media-hosting.imagekit.io/b8cc5294003048e9/1.png?Expires=1839430728&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=A7Ik549w0kafqo3gyaLt7LEvJYX7zoj7Tb3m5E0bK~JtlJ-i1eGCZw0ZdSQgHP2OtlAWGLtNSSnqt7WqEyTr65MGdxz-uQHkQIJxUzcvtybsgIQSwMK9nJjtojFftbsUTlBiGp~EOG-w-1H~ZlCuRUQZ4TsmMI4iFJro-1MjMMPrMj36jwMbh-sfUNN-6Q5rLJjPr9rLEgCy70881ZTvwQBSJrEnPcO7iiZKp9EbR-duOpeVH3KCpZo2cBhP4QESKvd2wLTrwiVtxoFuN~jDskVXqEJewwUle6MF~aVutwch4CfEevCP6qCREX8uK8ZOaDN2NeyZgPdOAN-Fo8QbNQ__',
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
