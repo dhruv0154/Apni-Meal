@@ -21,9 +21,9 @@ const chefs: Chef[] = [
   {
     name: "Priya Sharma",
     image:
-      "https://imgs.search.brave.com/kXfwERrNcdCdJKPju0QDwBJ3V1JV-pxHYkEwfu05aOI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuaW5kaWFuZXhw/cmVzcy5jb20vMjAy/NC8wMS9HYXJpbWEt/QXJvcmEtMy5qcGc_/dz02NDA",
+      "https://imgs.search.brave.com/UIu_vYLYTkYzcRf66u1YWjjJupD6BiV2Q5VJ0rQDH4s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTM2/ODk2MjI4Ny9waG90/by9pbmRpYW4teW91/bmctd29tZW4tc3Rv/Y2stcGhvdG8uanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPXhE/TTlLSjJaZHB4ZUlO/ZTQzSnJhcGRkRHJj/VGtBbEExS0U3UGRm/YkZ0MDg9",
     specialty: "North Indian",
-    rating: 4.9,
+    rating: 4.0,
     reviews: 128,
     featured: "Butter Chicken",
     location: "New Delhi, India",
@@ -37,9 +37,9 @@ const chefs: Chef[] = [
   {
     name: "Rajesh Kumar",
     image:
-      "https://images.unsplash.com/photo-1583394293214-28ded15ee548?auto=format&fit=crop&q=80",
+      "https://knot9prod.s3.amazonaws.com/thumbnails/022113/hover_022113066.jpg",
     specialty: "South Indian",
-    rating: 4.8,
+    rating: 4.5,
     reviews: 156,
     featured: "Masala Dosa",
     location: "Chennai, India",
@@ -53,9 +53,9 @@ const chefs: Chef[] = [
   {
     name: "Anjali Patel",
     image:
-      "https://imgs.search.brave.com/qMdLfyAvrIgVw4KJky_7Zh-1d5wHyeOHMbBvliFDaNo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jaGVm/aWJwYS5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMjQvMTEv/Y2hlZi1nYXJpbWEt/YXJvcmEuanBn",
+      "https://imgs.search.brave.com/79XI4PKXOc1xfM1K5zVYq9lnDYDJn5MHmm-Di2gJF1A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9pbmRpYW4tcGVv/cGxlLWVuam95aW5n/LXRyYWRpdGlvbmFs/LWluZGlhbi1mb29k/cy1mcnVpdHMtY3Vy/cnktc25hY2tzLWRl/c3NlcnRzXzk3ODc4/Ni00NzU4My5qcGc_/c2VtdD1haXNfaHli/cmlkJnc9NzQw",
     specialty: "Gujarati",
-    rating: 4.9,
+    rating: 4.2,
     reviews: 142,
     featured: "Thepla",
     location: "Ahmedabad, India",
@@ -169,8 +169,13 @@ export function ChefPreview() {
                     const fillPercent = Math.min(Math.max(chef.rating - starIndex, 0), 1) * 100;
                     return (
                       <div key={starIndex} className="relative w-5 h-5 mx-0.5">
-                        <Star className="w-5 h-5 text-gray-300" />
+                        {/* Background empty star */}
+                        <Star className="w-5 h-5 text-gray-300 absolute" />
+
+                        {/* Animated filled star */}
                         <motion.div
+                          className="absolute top-0 left-0 h-full overflow-hidden"
+                          style={{ width: `${fillPercent}%` }}
                           initial={{ width: 0 }}
                           animate={{ width: `${fillPercent}%` }}
                           transition={{
@@ -178,10 +183,8 @@ export function ChefPreview() {
                             ease: "easeOut",
                             delay: starIndex * 0.1,
                           }}
-                          className="overflow-hidden absolute top-0 left-0"
-                          style={{ pointerEvents: "none" }}
                         >
-                          <Star className="w-5 h-5 text-yellow-500" />
+                          <Star className="w-5 h-5 text-yellow-500 fill-current" />
                         </motion.div>
                       </div>
                     );
