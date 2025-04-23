@@ -27,7 +27,7 @@ const menuItems = [
   {
     name: "South Indian Combo",
     image:
-      "https://images.unsplash.com/photo-1610192244261-3f33de3f55e3?auto=format&fit=crop&q=80",
+      "https://media.istockphoto.com/id/1173807289/photo/indian-food.jpg?s=612x612&w=0&k=20&c=1F-in5AuRPGd8-95r0r2DZAwP7Qf6KQrROHxINFXsxM=",
     price: 129,
     chef: "Rajesh Kumar",
     prepTime: "25 min",
@@ -67,9 +67,9 @@ const menuItems = [
     tags: ["Healthy", "High Protein"],
   },
   {
-    name: "Veggie Paradise",
+    name: "Punjabi Thali",
     image:
-      "https://images.unsplash.com/photo-1584302178571-d35f5b07d54d?auto=format&fit=crop&q=80",
+      "https://imgs.search.brave.com/igoK5Optr_b427gg9FMaHqeDfiSby_IIuf0cVhc8-QY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzEyLzg2LzM0LzY5/LzM2MF9GXzEyODYz/NDY5MDZfRUs0dUF4/enA1UXBNY1dIcVpw/bzBjRDRKdVAyUmpH/UlQuanBn",
     price: 159,
     chef: "Ankit Verma",
     prepTime: "28 min",
@@ -77,13 +77,13 @@ const menuItems = [
     rating: 4.5,
     reviews: 67,
     description:
-      "A medley of fresh vegetables with a tangy twist, served with aromatic rice. A feast for both the eyes and the palate.",
+      "A mix of flavourful food which originates from punjab.",
     tags: ["Vegetarian"],
   },
   {
-    name: "Spicy Ramen Bowl",
+    name: "Rajasthani Thali",
     image:
-      "https://images.unsplash.com/photo-1617191519879-6841e02c6a14?auto=format&fit=crop&q=80",
+      "https://imgs.search.brave.com/PLHU-NsFeHZ9XfLNLNT9Zb9dy280OviaYGteuWExVLo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc3F1YXJlc3Bh/Y2UtY2RuLmNvbS9j/b250ZW50L3YxLzVm/MmZhMDM5MTAzYzdh/MDg4NTYwMzJjMS8x/NjE3NDEwMDM4NDMy/LVJQTlpVTTE1UExH/SzVYMVBGRkhCLzIw/MjEwMzIxXzE2MTkx/NC5qcGc",
     price: 189,
     chef: "Nisha Singh",
     prepTime: "22 min",
@@ -91,7 +91,7 @@ const menuItems = [
     rating: 4.7,
     reviews: 89,
     description:
-      "A hearty bowl of spicy ramen with a rich broth, fresh toppings, and a kick of heat. Perfect for ramen lovers.",
+      "A Rajasthani Thali is a vibrant, flavorful platter that reflects the bold and spicy cuisine of Rajasthan — shaped by its desert climate and royal heritage. It’s rich in ghee, spices, and traditionally vegetarian.",
     tags: ["Trending", "Spicy"],
   },
   // You can add more items here as needed.
@@ -165,7 +165,7 @@ function SampleMenuModal({
 }
 
 // Updated color scheme
-const menuBackgroundColor = '#fb8500';
+const menuBackgroundColor = '#FEF5E6';
 const menuTextColor = '#2D1810';
 const menuAccentColor = '#D62828';
 
@@ -196,12 +196,10 @@ export function FeaturedMenu() {
   return (
     <>
       <section
-        className={`py-24 bg-[${menuBackgroundColor}] relative overflow-hidden`}
-        style={{
-          backgroundImage: "url('https://source.unsplash.com/featured/?meal')",
-          backgroundSize: "cover",
-        }}
-      >
+  className="py-24 relative overflow-hidden"
+  style={{ backgroundColor: menuBackgroundColor }}
+>
+
         {/* Animated Background Blobs */}
         <motion.div
           className="absolute top-0 left-0 w-64 h-64 bg-[#D62828] opacity-10 rounded-full filter blur-3xl"
@@ -227,7 +225,7 @@ export function FeaturedMenu() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-3xl md:text-4xl font-display font-bold text-white mb-4"
+              className="text-3xl md:text-4xl font-display font-bold text-black mb-4"
             >
               Today's Special Menu
             </motion.h2>
@@ -236,7 +234,7 @@ export function FeaturedMenu() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-lg text-white/90 max-w-2xl mx-auto"
+              className="text-lg text-black/90 max-w-2xl mx-auto"
             >
               Enjoy our curated selection of home-cooked meals, made fresh daily.
             </motion.p>
